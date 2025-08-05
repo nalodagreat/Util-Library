@@ -131,6 +131,43 @@ static  void swap(int &a, int &b)
         a = b;
         b = c;
     }
+    static void  fillArrayWithRandomNum(int arr[100], short arrLength, short from, short to)
+    {
+        for (int i = 0; i < arrLength; i++)
+        {
+            arr[i] = randomNumber(from, to);
+        }
 
+    }
+    static void fillArrayWithRandomWords(string arr[100], short arrLength, enCharType charType,short wordLength)
+    {
+        for (int i = 0; i < arrLength; i++)
+        {
+            arr[i] = generateWord(charType,wordLength);
+        }
+    }
+    static void fillArrayWithRandomKeys(string arr[100], int arrLength, enCharType CharType)
+    {
+        for (int i = 0; i < arrLength; i++)
+            arr[i] = generateKey(CharType);
+    }
+
+    static void  shuffleArray(int arr[100], short arrLength)
+    {
+        for (int i = 0; i < arrLength; i++)
+        {
+            swap(arr[randomNumber(1, arrLength)-1], arr[randomNumber(1, arrLength)-1]);
+        }
+    }
+    static void shuffleArray(string arr[100], short arrLength)
+    {
+        for (int i = 0; i < arrLength; i++)
+        {
+            swap(arr[randomNumber(1, arrLength)-1], arr[randomNumber(1, arrLength)-1]);
+        }
+    }
+
+    
+ 
 
 };
