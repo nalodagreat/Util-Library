@@ -18,7 +18,7 @@ class Util
         int randNum = rand() % (To - From + 1) + From;
         return randNum;
     }
-    
+
     static char generateSmallLetter()
     {
         return char(randomNumber(97, 122));
@@ -44,6 +44,32 @@ class Util
         char special = generateSpecialChar();
         char arr[] = { small,capital,digit,special };
         return arr[randomNumber(0, 3)];
+    }
+
+        enum enCharType 
+    {
+        SamallLetter = 1, CapitalLetter = 2,
+        Digit = 3, MixChars = 4, SpecialCharacter = 5
+    };
+
+    static char GetRandomChar(enCharType charType)
+    {
+        if (charType == SamallLetter)
+            return generateSmallLetter();
+        else if (charType == CapitalLetter)
+        {
+            return generateCapitalLetter();
+        }
+        else if (charType == Digit)
+        {
+            return generateDigit();
+        }
+        else if (charType == SpecialCharacter)
+            return generateSpecialChar();
+        else
+        {
+            return generateMixChar();
+        }
     }
 
 
