@@ -178,5 +178,21 @@ static  void swap(int &a, int &b)
         return t;
     }
  
-
+    static string  encryptText(string text, short encryptionKey)
+    {
+        for (int i = 0; i < text.size(); i++)
+        {
+            text[i] = char( (int) text[i] + encryptionKey );
+        }
+        return text;
+    }
+    static string  decryptText(string text, short encryptionKey)
+    {
+        for (int i = 0; i < text.size(); i++)
+        {
+            text[i] = char((int)text[i] -  encryptionKey);
+        }
+        return text;
+    }
+    
 };
