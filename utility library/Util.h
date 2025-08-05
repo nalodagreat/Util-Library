@@ -167,7 +167,16 @@ static  void swap(int &a, int &b)
         }
     }
 
-    
+     static string  Tabs(short NumberOfTabs)
+    {
+        string t = "";
+
+        for (int i = 1; i < NumberOfTabs; i++)
+        {
+            t = t + "\t";
+        }
+        return t;
+    }
  
 
 };
