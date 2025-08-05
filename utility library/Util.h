@@ -80,6 +80,29 @@ class Util
         }
         return word;
     }
+static string generateKey(enCharType charType)
+    {
+        string key = "",sperator="-"; short groups = 12;
+        for (int i = 0; i < groups; i++)
+        {
+            key += generateWord(charType,4);
+            if (i < groups - 1)
+            {
+                key += sperator;
+            }
+        }
+        return key;
+    }
+
+    static vector <string>  generateKeys(enCharType charType,short quantity)
+    {
+        vector <string> vKeys;
+        for (int i = 0; i < quantity; i++)
+        {
+            vKeys.push_back(generateKey(charType));
+        }
+        return vKeys;
+    }
 
 
 };
