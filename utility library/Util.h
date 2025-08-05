@@ -71,6 +71,15 @@ class Util
             return generateMixChar();
         }
     }
+    static string generateWord(enCharType charType,short length)
+    {
+        string word = "";
+        for (int i = 0; i < length; i++)
+        {
+            word += GetRandomChar(charType);
+        }
+        return word;
+    }
 
 
 };
