@@ -103,6 +103,34 @@ static string generateKey(enCharType charType)
         }
         return vKeys;
     }
+static  void swap(int &a, int &b)
+    {
+        int c = 0;
+        c = a;
+        a = b;
+        b = c;
+    }
+    static void swap(double &a, double &b)
+    {
+        double c = 0;
+        c = a;
+        a = b;
+        b = c;
+    }
+    static void swap(string& a, string& b)
+    {
+        string c = "";
+        c = a;
+        a = b;
+        b = c;
+    }
+    static  void swap(char& a, char& b)
+    {
+        char c;
+        c = a;
+        a = b;
+        b = c;
+    }
 
 
 };
